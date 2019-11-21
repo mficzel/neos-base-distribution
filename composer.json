@@ -17,18 +17,13 @@
     },
     "require": {
         "neos/flow-development-collection": "dev-feature/addPostCreateProjectCommandToComposerScripts as dev-master",
-        "neos/neos": "@dev",
-        "neos/site-kickstarter": "@dev",
-
+        "neos/neos-development-collection": "dev-master",
         "neos/demo": "@dev",
         "neos/neos-ui": "@dev",
         "neos/seo": "@dev",
         "neos/fusion-afx": "@dev",
         "neos/redirecthandler-neosadapter": "@dev",
-        "neos/redirecthandler-databasestorage": "@dev",
-
-        "neos/setup": "@dev",
-        "neos/neos-setup": "@dev"
+        "neos/redirecthandler-databasestorage": "@dev"
     },
     "require-dev": {
         "neos/buildessentials": "@dev",
