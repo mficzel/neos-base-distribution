@@ -72,7 +72,7 @@
                         "For local development you still have to:",
                         "1. Add database credentials to Configuration/Development/Settings.yaml",
                         "2. Migrate database './flow doctrine:migrate'",
-                        "3. Import site data './flow site:import Neos.Demo'",
+                        "3. Import site data './flow site:import Neos.Demo'"
                     ]
                 }
             }
