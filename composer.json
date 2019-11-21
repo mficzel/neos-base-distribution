@@ -52,8 +52,8 @@
         "neos": {
             "post-create-project-tasks": {
                 "nothing": {
-                    "type": "nothing",
                     "description": "Start with am empty Neos Setup",
+                    "type": "nothing",
                     "hints": [
                         "For local development you still have to:",
                         "1. Add database credentials to Configuration/Development/Settings.yaml",
@@ -62,9 +62,12 @@
                     ]
                 },
                 "neosDemo": {
-                    "type": "require",
                     "description": "Start with the Neos.Demo content",
-                    "packages": ["neos/demo:dev-master"],
+                    "type": "composer",
+                    "options": {
+                        "command": "require",
+                        "packages": ["neos/demo:dev-master"]
+                    },
                     "hints": [
                         "For local development you still have to:",
                         "1. Add database credentials to Configuration/Development/Settings.yaml",
