@@ -16,6 +16,7 @@
         "bin-dir": "bin"
     },
     "require": {
+        "neos/flow-development-collection": "dev-feature/addPostCreateProjectCommandToComposerScripts as dev-master",
         "neos/neos": "@dev",
         "neos/site-kickstarter": "@dev",
 
@@ -40,6 +41,10 @@
         "distributionPackages": {
             "type": "path",
             "url": "./DistributionPackages/*"
+        },
+        "flow-development-collection": {
+            "type": "vcs",
+            "url": "git@github.com:mficzel/flow-development-collection.git"
         }
     },
     "replace": {
@@ -52,6 +57,7 @@
         "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
         "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
         "post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
-        "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+        "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
+        "post-create-project-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postCreateProjectCmd"
     }
 }
