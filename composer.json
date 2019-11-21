@@ -48,6 +48,33 @@
     "suggest": {
         "ext-pdo_sqlite": "For running functional tests out-of-the-box this is required"
     },
+    "extra": {
+        "neos": {
+            "post-create-project-tasks": {
+                "nothing": {
+                    "type": "nothing",
+                    "description": "Start with am empty Neos Setup",
+                    "hints": [
+                        "For local development you still have to:",
+                        "1. Add database credentials to Configuration/Development/Settings.yaml",
+                        "2. Migrate database './flow doctrine:migrate' ",
+                        "3. Import site data './flow site:import Neos.Demo'"
+                    ]
+                },
+                "neosDemo": {
+                    "type": "require",
+                    "description": "Start with the Neos.Demo content",
+                    "packages": ["neos/demo:dev-master"],
+                    "hints": [
+                        "For local development you still have to:",
+                        "1. Add database credentials to Configuration/Development/Settings.yaml",
+                        "2. Migrate database './flow doctrine:migrate'",
+                        "3. Create your site package './flow site:create'"
+                    ]
+                }
+            }
+        }
+    },
     "scripts": {
         "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
         "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
